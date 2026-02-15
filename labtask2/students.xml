@@ -1,40 +1,40 @@
 <students>
     <student>
-    <sl_no>23</sl_no>
-    <name> 
-    <first_name>jhon</first_name>
-    <last_name>carter</last_name>
-    </name>
-    <admission_date> 
-    <day>25</day>
-    <month>12</month>
-    <year>2015</year>
-    </admission_date>
+        <sl_no>23</sl_no>
+        <name> 
+            <first_name>jhon</first_name>
+            <last_name>carter</last_name>
+        </name>
+        <admission_date> 
+            <day>25</day>
+            <month>12</month>
+            <year>2015</year>
+        </admission_date>
     </student>
 
     <student>
-    <sl_no>29</sl_no>
-    <name> 
-    <first_name>Bob</first_name>
-    <last_name>Marshal</last_name>
-    </name>
-    <admission_date> 
-    <day>13</day>
-    <month>1</month>
-    <year>1999</year>
-    </admission_date>
+        <sl_no>29</sl_no>
+        <name> 
+            <first_name>Bob</first_name>
+            <last_name>Marshal</last_name>
+        </name>
+        <admission_date> 
+            <day>13</day>
+            <month>1</month>
+            <year>1999</year>
+        </admission_date>
     </student>
 
     <student>
-    <sl_no>35</sl_no>
-    <name> 
-    <first_name>clark</first_name>
-    <last_name>kent</last_name>
-    </name>
-    <admission_date> 
-    <day>17</day>
-    <month>6</month>
-    <year>2005</year>
-    </admission_date>
+        <sl_no>35</sl_no>
+        <name> 
+            <first_name>clark</first_name>
+            <last_name>kent</last_name>
+        </name>
+        <admission_date> 
+            <day>17</day>
+            <month>6</month>
+            <year>2005</year>
+        </admission_date>
     </student>
 </students>
