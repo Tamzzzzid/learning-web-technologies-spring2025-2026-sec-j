@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <b>4</b> <hr>
+        <fieldset style="width : 200px">
+            <legend>Date of Birth</legend>
+            <p><b>   dd   mm   yyyy</b></p> <br>
+            <input type="text" name="dd" size="1"> /
+            <input type="text" name="mm" size="1"> /
+            <input type="text" name="yyyy" size="1"> <hr>
+            <input type="submit" id="btn_submit_dob"> <br>
+        </fieldset>
+    </form>
+
+    <form>
+        <b>5</b> <hr>
+        <fieldset style="width : 200px">
+            <legend>Degree</legend>
+            <input type="checkbox" name="ssc" value="ssc"> SSC
+            <input type="checkbox" name="Hsc" value="Hsc"> HSC
+            <input type="checkbox" name="bsc" value="bsc"> BSC 
+        </fieldset>
+        <br>
+        <input type="submit" id="btn_submit_degree"> <br>
+    </form>
+
+     <form>
+        <b>6</b> <hr>
+        <b>Blood Group</b>
+        <select name="bloodgroup" id="bloodgroup">
+            <option value="">Select</option>
+            <option value="A+">A+</option>
+            <option value="O+">O+</option>
+            <option value="a-">a-</option>
+        </select> <br>
+        <hr style="width : 130px; margin-left: 0;">
+        <input type="submit" id="btn_submit_blood"> <br>
+    </form>
+    
+    <div>
+        <hr><b>7.</b> 
+        <form>
+            <fieldset style="width :250px">
+                <legend>profile picture</legend>
+                <b>User ID </b>
+                <input type="text" name="uid" id="uid"> <br>
+                <b>Picture  </b>
+                <input type="file" id="file"> <br> <hr>
+                <input type="submit" id="btnsubmitfile">
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("btn_submit_dob").addEventListener("click", function(event) {
+            event.preventDefault(); 
+
+            let dd = document.getElementsByName("dd")[0].value.trim();
+            let mm = document.getElementsByName("mm")[0].value.trim();
+            let yyyy = document.getElementsByName("yyyy")[0].value.trim();
+
+            if (dd === "" || mm === "" || yyyy === "") {
+                alert("Date of Birth cannot be empty.");
+                return;
+            }
+
+            if (isNaN(dd) || isNaN(mm) || isNaN(yyyy)) {
+                alert("Date of Birth must contain only numbers.");
+                return;
+            }
+
+            let dayNum = Number(dd);
+            let monthNum = Number(mm);
+            let yearNum = Number(yyyy);
+
+            if (dayNum < 0 || dayNum > 31) {
+                alert("Day must be between 0 and 31.");
+                return;
+            }
+            if (monthNum < 1 || monthNum > 12) {
+                alert("Month must be between 1 and 12.");
+                return;
+            }
+            if (yearNum < 1900 || yearNum > 2016) {
+                alert("Year must be between 1900 and 2016.");
+                return;
+            }
+
+            alert("Date of Birth is valid!");
+        });
+
+        document.getElementById("btn_submit_degree").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            let isSscChecked = document.getElementsByName("ssc")[0].checked;
+            let isHscChecked = document.getElementsByName("Hsc")[0].checked;
+            let isBscChecked = document.getElementsByName("bsc")[0].checked;
+
+            if (!isSscChecked && !isHscChecked && !isBscChecked) {
+                alert("Please select at least one Degree.");
+                return;
+            }
+
+            alert("Degree selected successfully!");
+        });
+
+        document.getElementById("btn_submit_blood").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            let bloodGroupValue = document.getElementById("bloodgroup").value;
+
+            if (bloodGroupValue === "") {
+                alert("Please select a Blood Group.");
+                return;
+            }
+
+            alert("Blood Group selected successfully!");
+        });
+
+        document.getElementById("btnsubmitfile").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            let uidValue = document.getElementById("uid").value.trim();
+            let fileValue = document.getElementById("file").value; 
+
+            if (uidValue === "") {
+                alert("User ID cannot be empty.");
+                return;
+            }
+            if (isNaN(uidValue) || Number(uidValue) <= 0) {
+                alert("User ID must be a positive number.");
+                return;
+            }
+
+            if (fileValue === "") {
+                alert("Picture cannot be empty. Please choose a file.");
+                return;
+            }
+
+            alert("Profile picture and User ID are valid!");
+        });
+    </script>
+</body>
+</html>

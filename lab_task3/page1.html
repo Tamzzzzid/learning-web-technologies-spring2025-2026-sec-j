@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Document</title>
+</head>
+<body>
+    
+    <div>
+        <b>1.</b> <br>
+        <h4>Name</h4>
+        <input type="text" id="name"> <br><br>
+        <input type="button" id="submit_name" value="Submit Name">
+        <hr>
+    </div>
+
+    <div>
+        <b>2.</b> <br>
+        <h4>Email</h4>
+        <input type="text" name="txt_mail">
+        <span id="hint" title="enter a valid email like example@gmail.com" style="background-color: gray; background-size: 10px;"> i </span>
+        <br><br>
+        <input type="button" name="btn_submit2" value="Submit Email">
+        <br><br>
+    </div>
+
+    <div>
+       <form id="genderForm">
+            <b>3</b> <hr>
+            <fieldset style="width:250px">
+                <legend>Gender</legend>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="other"> Other 
+            </fieldset> <br>
+            <input type="submit" name="btn_submit3" value="Submit Gender"> <br>
+        </form>
+    </div>
+
+    <script>
+        // Name 
+        document.getElementById("submit_name").addEventListener("click", function() {
+            let nameInput = document.getElementById("name").value.trim();
+            if (nameInput === "") { alert("Name cannot be empty."); return; }
+            
+            let firstLetter = nameInput.charAt(0);
+            if (!((firstLetter >= 'a' && firstLetter <= 'z') || (firstLetter >= 'A' && firstLetter <= 'Z'))) {
+                alert("Name must start with a letter."); return;
+            }
+            
+            if (nameInput.split(" ").length < 2) { alert("Name must contain at least two words."); return; }
+            
+            if (!/^[a-zA-Z.\- ]+$/.test(nameInput)) { alert("Name can only contain letters, dots, or dashes."); return; }
+            alert("Name is valid!");
+        });
+
+        // Email 
+        let emailSubmitBtn = document.querySelector('input[name="btn_submit2"]');
+        emailSubmitBtn.addEventListener("click", function() {
+            let emailValue = document.querySelector('input[name="txt_mail"]').value.trim();
+            if (emailValue === "") { alert("Email cannot be empty."); return; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) { alert("Please enter a valid email."); return; }
+            alert("Email is valid!");
+        });
+
+        // Gender 
+        document.querySelector('input[name="btn_submit3"]').addEventListener("click", function(event) {
+            event.preventDefault(); // Stops form from refreshing page
+            let maleRadio = document.querySelector('input[value="male"]');
+            let femaleRadio = document.querySelector('input[value="Female"]');
+            let otherRadio = document.querySelector('input[value="other"]');
+
+            if (!maleRadio.checked && !femaleRadio.checked && !otherRadio.checked) {
+                alert("Please select a gender."); return;
+            }
+            alert("Gender selected successfully!");
+        });
+    </script>
+</body>
+</html>
