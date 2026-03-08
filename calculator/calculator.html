@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //js calc design 
+        let body=document.body
+        let form=document.createElement("form");
+        form.style.width="25%"
+        form.style.backgroundColor="blue"
+        //TEXTBOX
+        let a=""
+        let txt=document.createElement("b")
+        txt.id="txt"
+        txt.innerHTML=a
+        txt.style.backgroundColor="white"
+        txt.style.width="80%"
+        txt.style.margin="2%"
+        txt.style.display = "inline-block";
+
+        form.appendChild(txt); 
+        //form.appendChild(txt) >>>>>>>>>>>>>>>>>>>>>>>>>>>
+        //br
+         let br1=document.createElement("br")
+         form.append(br1)
+        //button 1
+        let btn1=document.createElement("input")
+        btn1.type="button"
+        btn1.id="btn1"
+        btn1.value="1"
+        btn1.style.width="15%"
+        btn1.style.backgroundColor="pink"
+        form.append(btn1)
+
+        //button 2
+        let btn2=document.createElement("input")
+        btn2.type="button"
+        btn2.id="btn2"
+        btn2.value="2"
+        btn2.style.width="15%"
+        btn2.style.backgroundColor="pink"
+        form.append(btn2)
+
+        //button 3
+        let btn3=document.createElement("input")
+        btn3.type="button"
+        btn3.id="btn3"
+        btn3.value="3"
+        btn3.style.width="15%"
+        btn3.style.backgroundColor="pink"
+        form.append(btn3)
+
+
+        //button 4
+        let btn4=document.createElement("input")
+        btn4.type="button"
+        btn4.id="btn4"
+        btn4.value="4"
+        btn4.style.width="15%"
+        btn4.style.backgroundColor="pink"
+        form.append(btn4)
+
+        //button 5
+        let btn5=document.createElement("input")
+        btn5.type="button"
+        btn5.id="btn5"
+        btn5.value="5"
+        btn5.style.width="15%"
+        btn5.style.backgroundColor="pink"
+        form.append(btn5)
+
+        //button 6
+        let btn6=document.createElement("input")
+        btn6.type="button"
+        btn6.id="btn6"
+        btn6.value="6"
+        btn6.style.width="15%"
+        btn6.style.backgroundColor="pink"
+        form.append(btn6)
+
+        //button 7
+        let btn7=document.createElement("input")
+        btn7.type="button"
+        btn7.id="btn7"
+        btn7.value="7"
+        btn7.style.width="15%"
+        btn7.style.backgroundColor="pink"
+        form.append(btn7) 
+
+        //button 8
+        let btn8=document.createElement("input")
+        btn8.type="button"
+        btn8.id="btn8"
+        btn8.value="8"
+        btn8.style.width="15%"
+        btn8.style.backgroundColor="pink"
+        form.append(btn8) 
+
+        //button 9
+        let btn9=document.createElement("input")
+        btn9.type="button"
+        btn9.id="btn9"
+        btn9.value="9"
+        btn9.style.width="15%"
+        btn9.style.backgroundColor="pink"
+        form.append(btn9) 
+
+        //button 0
+        let btn0=document.createElement("input")
+        btn0.type="button"
+        btn0.id="btn0"
+        btn0.value="0"
+        btn0.style.width="15%"
+        btn0.style.backgroundColor="pink"
+        form.append(btn0) 
+
+        //button +
+        let btnP=document.createElement("input")
+        btnP.type="button"
+        btnP.id="btnP"
+        btnP.value="+"
+        btnP.style.width="15%"
+        btnP.style.backgroundColor="pink"
+        form.append(btnP) 
+
+        //button *
+        let btnm=document.createElement("input")
+        btnm.type="button"
+        btnm.id="btnm"
+        btnm.value="*"
+        btnm.style.width="15%"
+        btnm.style.backgroundColor="pink"
+        form.append(btnm) 
+
+         //button -
+        let btns=document.createElement("input")
+        btns.type="button"
+        btns.id="btns"
+        btns.value="-"
+        btns.style.width="15%"
+        btns.style.backgroundColor="pink"
+        form.append(btns) 
+
+        //button /
+        let btnd=document.createElement("input")
+        btnd.type="button"
+        btnd.id="btnd"
+        btnd.value="/"
+        btnd.style.width="15%"
+        btnd.style.backgroundColor="pink"
+        form.append(btnd) 
+
+        //button enter
+        let btnEnter=document.createElement("input")
+        btnEnter.type="button"
+        btnEnter.id="btnEnter"
+        btnEnter.value="ENTER"
+        btnEnter.style.width="30%"
+        btnEnter.style.backgroundColor="pink"
+        form.append(btnEnter) 
+
+
+        //button  ac
+        let btnac=document.createElement("input")
+        btnac.type="button"
+        btnac.id="btnac"
+        btnac.value="AC"
+        btnac.style.width="30%"
+        btnac.style.backgroundColor="pink"
+        form.append(btnac) 
+
+
+        //action
+        btn0.addEventListener("click", function(){
+            a = a + "0";
+            txt.innerHTML = a;
+        });
+        //action
+        btn1.addEventListener("click", function(){
+            a = a + "1";
+            txt.innerHTML = a;
+        });
+        //action
+        btn2.addEventListener("click", function(){
+            a = a + "2";
+            txt.innerHTML = a;
+        });
+        //action
+        btn3.addEventListener("click", function(){
+            a = a + "3";
+            txt.innerHTML = a;
+        });
+        //action
+        btn4.addEventListener("click", function(){
+            a = a + "4";
+            txt.innerHTML = a;
+        });
+        //action
+        btn5.addEventListener("click", function(){
+            a = a + "5";
+            txt.innerHTML = a;
+        });
+        //action
+        btn6.addEventListener("click", function(){
+            a = a + "6";
+            txt.innerHTML = a;
+        });
+        //action
+        btn7.addEventListener("click", function(){
+            a = a + "7";
+            txt.innerHTML = a;
+        });
+        //action
+        btn8.addEventListener("click", function(){
+            a = a + "8";
+            txt.innerHTML = a;
+        });
+        //action
+        btn9.addEventListener("click", function(){
+            a = a + "9";
+            txt.innerHTML = a;
+        });
+        //action
+        btnP.addEventListener("click", function(){
+            a = a + "+";
+            txt.innerHTML = a;
+        });
+        //action
+        btns.addEventListener("click", function(){
+            a = a + "-";
+            txt.innerHTML = a;
+        });
+        //action
+        btnm.addEventListener("click", function(){
+            a = a + "*";
+            txt.innerHTML = a;
+        });
+        //action
+        btnd.addEventListener("click", function(){
+            a = a + "/";
+            txt.innerHTML = a;
+        });
+        //action
+        btnac.addEventListener("click", function(){
+            a = "";
+            txt.innerHTML = a;
+        });
+
+
+
+        let op1 = "";
+        let op2 = "";
+        let opdo = "";
+
+        btnEnter.addEventListener("click", function(){
+           
+            op1 = "";
+            op2 = "";
+            opdo = "";
+            let foundOperator = false;
+
+            
+            for(let i = 0; i < a.length; i++) {
+                let char = a[i]; 
+
+                
+                if(char == "+" || char == "-" || char == "*" || char == "/") {
+                    opdo = char; 
+                    foundOperator = true; 
+                } else {
+                    
+                    if(foundOperator == false) {
+                        op1 = op1 + char;
+                    } 
+                    
+                    else {
+                        op2 = op2 + char;
+                    }
+                }
+            }
+
+            
+            let num1 = Number(op1);
+            let num2 = Number(op2);
+            let result = 0;
+
+            
+            if(opdo == "+") { result = num1 + num2; }
+            if(opdo == "-") { result = num1 - num2; }
+            if(opdo == "*") { result = num1 * num2; }
+            if(opdo == "/") { result = num1 / num2; }
+
+            
+            a = result;
+            txt.innerHTML = a;
+        });
+
+        body.appendChild(form);
+    </script>
+</body>
+</html>
+
+
+
+
+        
+        body.appendChild(form);
+    </script>
+</body>
+</html>
