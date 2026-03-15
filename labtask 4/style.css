@@ -1,0 +1,22 @@
+body {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#mainBox {
+    background-color: pink;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+#qty {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+#totalTxt {
+    background-color: white;
+    width: 50%;
+    font-weight: bold;
+}
