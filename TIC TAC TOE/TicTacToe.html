@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <script>
+        let flag=0
+        let body=document.body
+        body.style.marginLeft="100px"
+        body.style.marginTop="100px"
+        let div=document.createElement("div")
+
+        //button11
+        let btn11=document.createElement("input")
+        btn11.type="button";
+        btn11.id="btn11";
+        btn11.value="";
+        btn11.style.height="50px"
+        btn11.style.width="50px"
+        btn11.style.backgroundColor="rgb(250, 191, 97)"
+        div.append(btn11) 
+        //button12
+        let button12=document.createElement("input")
+        button12.type="button";
+        button12.id="button12";
+        button12.value="";
+        button12.style.height="50px"
+        button12.style.width="50px"
+        button12.style.backgroundColor="pink"
+        div.append(button12) 
+
+        //button13
+        let btn13=document.createElement("input")
+        btn13.type="button";
+        btn13.id="btn13";
+        btn13.value="";
+        btn13.style.height="50px"
+        btn13.style.width="50px"
+        btn13.style.backgroundColor="rgb(250, 191, 97)"
+        div.append(btn13) 
+
+        //br
+
+        let br=document.createElement("br")
+        div.append(br)
+
+         //button21
+        let btn21=document.createElement("input")
+        btn21.type="button";
+        btn21.id="btn21";
+        btn21.value="";
+        btn21.style.height="50px"
+        btn21.style.width="50px"
+        btn21.style.backgroundColor="pink"
+        div.append(btn21) 
+        //button22
+        let button22=document.createElement("input")
+        button22.type="button";
+        button22.id="button22";
+        button22.value="";
+        button22.style.height="50px"
+        button22.style.width="50px"
+        button22.style.backgroundColor="rgb(250, 191, 97)"
+        div.append(button22) 
+
+        //button23
+        let btn23=document.createElement("input")
+        btn23.type="button";
+        btn23.id="btn23";
+        btn23.value="";
+        btn23.style.height="50px"
+        btn23.style.width="50px"
+        btn23.style.backgroundColor="pink"
+        div.append(btn23) 
+
+         //br1
+
+        let br1=document.createElement("br")
+        div.append(br1)
+
+        //button31
+        let btn31=document.createElement("input")
+        btn31.type="button";
+        btn31.id="btn31";
+        btn31.value="";
+        btn31.style.height="50px"
+        btn31.style.width="50px"
+        btn31.style.backgroundColor="rgb(250, 191, 97)"
+        div.append(btn31) 
+        //button32
+        let button32=document.createElement("input")
+        button32.type="button";
+        button32.id="button32";
+        button32.value="";
+        button32.style.height="50px"
+        button32.style.width="50px"
+        button32.style.backgroundColor="pink"
+        div.append(button32) 
+
+        //button33
+        let btn33=document.createElement("input")
+        btn33.type="button";
+        btn33.id="btn33";
+        btn33.value="";
+        btn33.style.height="50px"
+        btn33.style.width="50px"
+        btn33.style.backgroundColor="rgb(250, 191, 97)"
+        div.append(btn33) 
+
+        function marking(btn){
+            if (flag==0) {btn.value="0";flag=1;}
+            else{btn.value="X";flag=0;}
+        }
+
+        function clear() {
+            btn11.value="";
+            button12.value="";
+            btn13.value="";
+
+            btn21.value="";
+            button22.value="";
+            btn23.value="";
+
+            btn31.value="";
+            button32.value="";
+            btn33.value="";
+
+        }
+        function check() {
+            
+            if (flag==1){
+                if(btn11.value=="0" && button12.value=="0" && btn13.value=="0") {alert("Player 1 wins");clear();}
+                else if(btn21.value=="0" && button22.value=="0" && btn23.value=="0") {alert("Player 1 wins");clear();}
+                else if(btn31.value=="0" && button32.value=="0" && btn33.value=="0") {alert("Player 1 wins");clear();}
+
+                else if(btn11.value=="0" && btn21.value=="0" && btn31.value=="0") {alert("Player 1 wins");clear();}
+                else if(button12.value=="0" && button22.value=="0" && button32.value=="0") {alert("Player 1 wins");clear();}
+                else if(btn13.value=="0" && btn23.value=="0" && btn33.value=="0") {alert("Player 1 wins");clear();}
+
+                else if(btn11.value=="0" && button22.value=="0" && btn33.value=="0") {alert("Player 1 wins");clear();}
+                else if(btn13.value=="0" && button22.value=="0" && btn31.value=="0") {alert("Player 1 wins");clear();}
+
+
+                
+
+                
+
+
+            }
+
+            else{
+            if(btn11.value=="X" && button12.value=="X" && btn13.value=="X") {alert("Player 2 wins");clear();}
+            else if(btn21.value=="X" && button22.value=="X" && btn23.value=="X") {alert("Player 2 wins");clear();}
+            else if(btn31.value=="X" && button32.value=="X" && btn33.value=="X") {alert("Player 2 wins");clear();}
+
+            else if(btn11.value=="X" && btn21.value=="X" && btn31.value=="X") {alert("Player 2 wins");clear();}
+            else if(button12.value=="X" && button22.value=="X" && button32.value=="X") {alert("Player 2 wins");clear();}
+            else if(btn13.value=="X" && btn23.value=="X" && btn33.value=="X") {alert("Player 2 wins");clear();}
+
+            else if(btn11.value=="X" && button22.value=="X" && btn33.value=="X") {alert("Player 2 wins");clear();}
+            else if(btn13.value=="X" && button22.value=="X" && btn31.value=="X") {alert("Player 2 wins");clear();}
+            }
+        }
+
+        btn11.addEventListener("click", function() { marking(btn11); check();});
+        button12.addEventListener("click", function() { marking(button12); check();});
+        btn13.addEventListener("click", function() { marking(btn13); check();});
+
+        btn21.addEventListener("click", function() { marking(btn21); check();});
+        button22.addEventListener("click", function() { marking(button22); check();});
+        btn23.addEventListener("click", function() { marking(btn23); check();});
+
+        btn31.addEventListener("click", function() { marking(btn31); check();});
+        button32.addEventListener("click", function() { marking(button32); check();});
+        btn33.addEventListener("click", function() { marking(btn33); check();});
+
+
+
+
+
+
+
+        body.append(div)
+
+    </script>
+    
+</body>
+</html>
