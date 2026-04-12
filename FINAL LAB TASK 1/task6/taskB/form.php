@@ -1,4 +1,14 @@
+<?php 
+$bg = $_POST['bg'] ?? '';
 
+if(isset($_POST["submit"])){
+    if($bg == ''){
+        echo "No blood group selected.";
+    } else {
+        echo "Selected Blood Group: {$bg}";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +19,7 @@
 <body>
     <fieldset style="width:25%">
         <legend>BLOOD GROUP</legend>
-        <form action="val.php" method="post">
+        <form action="" method="post">
           <select name="bg">
               <option value=""></option>
               <option value="A+" >A+</option>
