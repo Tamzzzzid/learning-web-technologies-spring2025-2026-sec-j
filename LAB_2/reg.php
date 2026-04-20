@@ -30,6 +30,12 @@
        
    }
    $_SESSION["email"]=$_POST["email"]??"";
+   $_SESSION["gender"]=$_POST["gender"]??"";
+   $dd=$_POST["dd"]??"" ;
+   $mm=$_POST["mm"]??"" ;
+   $yy=$_POST["yy"]??"" ;
+   $dob=$dd."-".$mm."-".$yy;
+   $_SESSION["dob"]=$dob;
        
 
 
@@ -81,15 +87,15 @@
 
                         <fieldset>
                             <legend>Gender</legend>
-                            <input type="radio">Male
-                            <input type="radio">Female
-                            <input type="radio">Other
+                            <input type="radio" value="male" name="gender">Male
+                            <input type="radio" value="female" name="gender">Female
+                            <input type="radio" value="other" name="gender">Other
                         </fieldset>
                         <fieldset>
                             <legend>Date of Birth</legend>
-                            <input type="text" size="3">/
-                            <input type="text" size="3">/
-                            <input type="text" size="3"> (dd/mm/yyyy)
+                            <input type="text" size="3" name="dd">/
+                            <input type="text" size="3" name="mm">/
+                            <input type="text" size="3" name="yy"> (dd/mm/yyyy)
                         </fieldset>
                         <hr>
                         <input type="submit" value="submit" name="submit">
