@@ -41,7 +41,7 @@
                 <b>X Company</b>
                 <span style="float:right;">
                     <a href="public.html">Home</a> |
-                    <a href="#">Login</a> |
+                    <a href="login.php">Login</a> |
                     <a href="reg.php">Registration</a>
                 </span>
             </td>
@@ -61,7 +61,7 @@
                         <input type="checkbox"> Remember Me <br><br>
 
                         <input type="submit" value="Submit" name="submit">
-                        <a href="#">Forgot Password?</a>
+                        <a href="forget.php">Forgot Password?</a>
                     </form>
 
                 </fieldset>

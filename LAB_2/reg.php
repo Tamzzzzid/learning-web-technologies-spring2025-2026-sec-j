@@ -19,10 +19,18 @@
        
    }
    $_SESSION["pass"]=$_POST["pass"]??"";
-       if($_SESSION["pass"]!="" && $_SESSION["name"]!=""){
-         echo"{$_SESSION['name']}=={$_SESSION['pass']}";
 
-       }
+
+   if(empty($_POST["email"])){
+    ?>
+        <script>
+            alert("Please enter a email");
+        </script>
+    <?php
+       
+   }
+   $_SESSION["email"]=$_POST["email"]??"";
+       
 
 
 ?>
@@ -50,6 +58,9 @@
                     <form action="" method="post">
                         <label>Name : </label>
                         <input type="text"  size="60" >
+                        <hr>
+                        <label>email : </label>
+                        <input type="text"  size="60"  name="email">
                         <hr>
 
                         
