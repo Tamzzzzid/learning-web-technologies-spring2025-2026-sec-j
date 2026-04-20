@@ -4,7 +4,7 @@
      if(empty($_POST["name"])){
         ?>
         <script>
-            alert("Please enter a name");
+            alert("Please enter a username");
         </script>
         <?php 
      }
@@ -16,12 +16,14 @@
             alert("Please enter a password");
         </script>
     <?php
-       $_SESSION["pass"]=$_POST["pass"]??"";
-       if($_SESSION["pass"]!="" && $_SESSION["pass"]!=""){
+       
+   }
+   $_SESSION["pass"]=$_POST["pass"]??"";
+       if($_SESSION["pass"]!="" && $_SESSION["name"]!=""){
          echo"{$_SESSION['name']}=={$_SESSION['pass']}";
 
        }
-   }
+
 
 ?>
 <!DOCTYPE html>
@@ -38,8 +40,8 @@
                 <b><span style="color: #2e8b57; font-size: 32px;">X</span>Company</b>
                 </td>
                 <td align="right" style="padding: 15px;">
-                    <a href="#" style="color: blue; text-decoration: none;">Home</a> | 
-                    <a href="#" style="color: blue; text-decoration: none;">Login</a> | 
+                    <a href="public.html" style="color: blue; text-decoration: none;">Home</a> | 
+                    <a href="login.php" style="color: blue; text-decoration: none;">Login</a> | 
                     <a href="reg.php" style="color: blue; text-decoration: none;">Registration</a>
                 </td>
             </tr>
@@ -47,12 +49,12 @@
                 <td colspan="2">
                     <form action="" method="post">
                         <label>Name : </label>
-                        <input type="text"  size="60" name="name">
+                        <input type="text"  size="60" >
                         <hr>
 
                         
                         <label>Username : </label>
-                        <input type="text"  size="60">
+                        <input type="text"  size="60" name="name">
                         <hr>
 
 
