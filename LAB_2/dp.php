@@ -1,6 +1,4 @@
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,23 +38,20 @@ session_start();
         </td>
         
         <td width="70%" valign="top">
-            <fieldset>
-                <legend>Profile</legend>
-                Name :  <span><?php echo $_SESSION['name'] ?> <hr></span>
-                Email : <span><?php echo $_SESSION['email'] ?></span><hr>
-                Gender : <span><?php echo $_SESSION['gender'] ?></span> <hr>
-                Date of Birth : <span><?php echo $_SESSION['dob'] ?></span> <hr>
-                <a href="edit.php">edit profile</a>
+            
+            
+        <fieldset>
+            <legend>profile</legend>
+            <img src="no_dp.webp" alt="" width="70px"> <hr>
+            <input type="file"> <hr>
+            <input type="submit">
+
+        </fieldset>
 
 
-            </fieldset>
-
+            
         </td>
-        <td>
-            <img src="no_dp.webp" alt="" width="80px">
-            <a href=""> change</a>
-
-        </td>
+        
     </tr>
 
     <tr>

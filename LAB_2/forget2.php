@@ -1,5 +1,15 @@
+
 <?php 
 session_start();
+$curr = $_POST["curr"] ?? ""; 
+$new  = $_POST["new"] ?? ""; 
+$ret  = $_POST["ret"] ?? ""; 
+if($curr==$_SESSION["pass"]){
+    if($new==$ret){
+        $_SESSION["pass"]=$curr;
+        header("Locatio: dashboard.php");
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,23 +50,19 @@ session_start();
         </td>
         
         <td width="70%" valign="top">
-            <fieldset>
-                <legend>Profile</legend>
-                Name :  <span><?php echo $_SESSION['name'] ?> <hr></span>
-                Email : <span><?php echo $_SESSION['email'] ?></span><hr>
-                Gender : <span><?php echo $_SESSION['gender'] ?></span> <hr>
-                Date of Birth : <span><?php echo $_SESSION['dob'] ?></span> <hr>
-                <a href="edit.php">edit profile</a>
+            
+            
+        <form action="" method="post">
+               Change Password : <input type="text" name="curr"> <br>
+                New Password : <input type="text" name="new"> <br>
+                Re-Enter Password : <input type="text" name="ret"> <br>
+                <input type="submit" name="submit">
+        </form>
 
 
-            </fieldset>
-
+            
         </td>
-        <td>
-            <img src="no_dp.webp" alt="" width="80px">
-            <a href=""> change</a>
-
-        </td>
+        
     </tr>
 
     <tr>
