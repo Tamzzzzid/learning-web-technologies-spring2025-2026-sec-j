@@ -18,7 +18,8 @@ session_start();
                         <font color="green" size="6"><i><b>X</b></i></font><font size="5"><b>Company</b></font>
                     </td>
                     <td align="right" valign="middle">
-                        Logged in as <a href="#">Bob</a> | <a href="#">Logout</a>
+                        Logged in as <span><?php echo $_SESSION["name"] ?></span>
+                        <span><a href="logout.php"> log out</a></span>
                     </td>
                 </tr>
             </table>
@@ -30,12 +31,12 @@ session_start();
             <h3>Account</h3>
             <hr width="100%" align="left">
             <ul>
-                <li><a href="dashboard.php">Dashboard</a></li>
-                <li><a href="#">View Profile</a></li>
-                <li><a href="#">Edit Profile</a></li>
-                <li><a href="#">Change Profile Picture</a></li>
-                <li><a href="#">Change Password</a></li>
-                <li><a href="#">Logout</a></li>
+               <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="viewprofile.php">View Profile</a></li>
+                <li><a href="edit.php">Edit Profile</a></li>
+                <li><a href="dp.php">Change Profile Picture</a></li>
+                <li><a href="forget2.php">Change Password</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </td>
         
