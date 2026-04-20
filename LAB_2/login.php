@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $_SESSION["chk"]=false;
   if(!empty($_POST["submit"])){
     if(empty($_POST["name"])){
         ?>
@@ -15,7 +16,8 @@
     $pass=$_POST["pass"] ?? "";
     if($nam!="" && $pass!=""){
         if($nam==$_SESSION["name"] && $pass==$_SESSION["pass"]){
-            echo"success";
+             $_SESSION["chk"]=true;
+             header("Location: dashboard.php");
         }
         else{
             echo"invalid username or pass";
