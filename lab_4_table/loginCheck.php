@@ -12,7 +12,7 @@
                 $_SESSION['status'] = true;
                 $_SESSION['username'] = $username;
                 setcookie('status', 'true', time()+3000, '/');
-                header('location: ../view/home.php');
+                header('location: home.php');
             }else{
                 echo "Invlaid user!";
             }
