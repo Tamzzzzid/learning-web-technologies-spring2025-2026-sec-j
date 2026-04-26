@@ -10,7 +10,8 @@
     $nam=$_POST["email"] ?? "";
     if($nam!=""){
         if($nam==$_SESSION["email"] ){
-            echo"success";
+            header("Location: dashboard.php");
+        
         }
         else{
             echo"invalid email";

@@ -1,6 +1,7 @@
 <?php
   session_start();
   $_SESSION["chk"]=false;
+  setcookie('status','false',time()+100000,'/');
   if(!empty($_POST["submit"])){
     if(empty($_POST["name"])){
         ?>
@@ -17,6 +18,9 @@
     if($nam!="" && $pass!=""){
         if($nam==$_SESSION["name"] && $pass==$_SESSION["pass"]){
              $_SESSION["chk"]=true;
+             if($_POST['cok']=="cok"){
+                setcookie('status','true',time()+100000,'/');
+             }
              header("Location: dashboard.php");
         }
         else{
@@ -60,7 +64,7 @@
 
                         <hr>
 
-                        <input type="checkbox"> Remember Me <br><br>
+                        <input type="checkbox" name="cok" value="cok"> Remember Me <br><br>
 
                         <input type="submit" value="Submit" name="submit">
                         <a href="forget.php">Forgot Password?</a>

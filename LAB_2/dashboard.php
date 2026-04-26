@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if($_SESSION["chk"]==false){
+if($_SESSION["chk"]==false || $_COOKIE['status']==false){
     header("Location: login.php");
         
 }
